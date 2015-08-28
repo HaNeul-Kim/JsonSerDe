@@ -3,10 +3,11 @@
 ## 사용법
 
 먼저 json 파일을 hdfs 에 올리고 json 파일을 이용해서 hive table 을 생성한다
-"`
-CREATE TABLE `serdetest`(
-  `number` int,
-  `text` string)
+
+`
+CREATE TABLE serdetest(
+  number int,
+  text string)
 ROW FORMAT SERDE
   'JsonSerDe'
 WITH SERDEPROPERTIES (
@@ -14,9 +15,9 @@ WITH SERDEPROPERTIES (
 LOCATION
   'hdfs://hskimsky:9000/user/hskimsky/json';
 
-hive> CREATE TABLE `serdetest`(
-    >   `number` int,
-    >   `text` string)
+hive> CREATE TABLE serdetest(
+    >   number int,
+    >   text string)
     > ROW FORMAT SERDE
     >   'JsonSerDe'
     > WITH SERDEPROPERTIES (
@@ -31,4 +32,5 @@ OK
 3	three
 Time taken: 0.285 seconds, Fetched: 3 row(s)
 hive>
-"`
+
+`
