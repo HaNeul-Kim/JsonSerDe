@@ -17,21 +17,17 @@ LOCATION
 `
 
 `
-hive> CREATE TABLE serdetest(
-    >   number int,
-    >   text string)
-    > ROW FORMAT SERDE
-    >   'JsonSerDe'
-    > WITH SERDEPROPERTIES (
-    >   'characterSet'='euc-kr')
-    > LOCATION
-    >   'hdfs://hskimsky:9000/user/hskimsky/json';
-
-hive> select * from serdetest;
-OK
-1	one
-2	two
-3	three
-Time taken: 0.285 seconds, Fetched: 3 row(s)
-hive>
+select * from serdetest;
 `
+
+OK
+
+1	one
+
+2	two
+
+3	three
+
+Time taken: 0.285 seconds, Fetched: 3 row(s)
+
+hive>
