@@ -14,7 +14,9 @@ WITH SERDEPROPERTIES (
   'characterSet'='euc-kr')
 LOCATION
   'hdfs://hskimsky:9000/user/hskimsky/json';
+`
 
+`
 hive> CREATE TABLE serdetest(
     >   number int,
     >   text string)
@@ -32,5 +34,4 @@ OK
 3	three
 Time taken: 0.285 seconds, Fetched: 3 row(s)
 hive>
-
 `
