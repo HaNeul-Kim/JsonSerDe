@@ -3,7 +3,7 @@
 ## 사용법
 
 먼저 json 파일을 hdfs 에 올리고 json 파일을 이용해서 hive table 을 생성한다
-
+"`
 CREATE TABLE `serdetest`(
   `number` int,
   `text` string)
@@ -31,3 +31,4 @@ OK
 3	three
 Time taken: 0.285 seconds, Fetched: 3 row(s)
 hive>
+"`
